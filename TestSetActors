@@ -1,0 +1,32 @@
+ public void testSetActors() {
+        System.out.println("---------------testSetActors---------------");
+
+//
+        boolean result = true;
+        boolean expResult = true;
+
+        LinkedList<String> actors = new LinkedList();
+
+        actors.add("Kalle Anka");
+        actors.add("Musse Pigg");
+
+        System.out.println("Actors är: " + actors);
+
+        DVD instance = new DVD("", "", "", 1, actors);
+
+        LinkedList testdata = new LinkedList();
+
+        /// loop
+        LinkedList temp = instance.getActors();
+
+        for (int i = 0; i < actors.size(); i++) {
+
+            testdata.add(temp.get(i));
+
+//            LinkedList expResult2 = actors;
+//            LinkedList Result2 = instance.actors;
+
+            assertEquals(expResult, result);
+
+        }
+    }
