@@ -1,4 +1,6 @@
-  System.out.println("---------------testSetActors---------------");
+ @Test
+    public void testSetActors() {
+        System.out.println("---------------testSetActors---------------");
 
         boolean result = false;
         boolean expResult = true;
