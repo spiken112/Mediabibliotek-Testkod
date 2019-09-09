@@ -1,0 +1,82 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package mediabiblioteket;
+
+import org.junit.After;
+import org.junit.AfterClass;
+import org.junit.Before;
+import org.junit.BeforeClass;
+import org.junit.Test;
+import static org.junit.Assert.*;
+
+/**
+ *
+ * @author Andreas
+ */
+public class BorrowerTest {
+
+    public BorrowerTest() {
+    }
+
+    @BeforeClass
+    public static void setUpClass() {
+    }
+
+    @AfterClass
+    public static void tearDownClass() {
+    }
+
+    @Before
+    public void setUp() {
+    }
+
+    @After
+    public void tearDown() {
+    }
+
+    @Test
+    public void testSetName() {
+        String name = "Old Anka";
+        Borrower a = new Borrower("Kalle Anka", "", "");
+        a.setName(name);
+
+        if (a.getName() == "Kalle Anka") {
+            fail();
+        }
+
+    }
+
+    /**
+     * Test of setSsn method, of class Borrower.
+     */
+    @Test
+    public void testSetSsn() {
+        String ssn = "880301";
+        Borrower a = new Borrower("", "111", "");
+        a.setSsn(ssn);
+
+        if (a.getSsn() == "111") {
+            fail();
+        }
+
+    }
+
+    /**
+     * Test of setphoneNumber method, of class Borrower.
+     */
+    @Test
+    public void testSetphoneNumber() {
+        String phoneNumber = "123456";
+        Borrower a = new Borrower("", "", "123");
+        a.setphoneNumber(phoneNumber);
+
+        if (a.getphoneNumber() == "123") {
+            fail();
+        }
+
+    }
+
+}
