@@ -1,8 +1,6 @@
- public void testSetActors() {
-        System.out.println("---------------testSetActors---------------");
+  System.out.println("---------------testSetActors---------------");
 
-//
-        boolean result = true;
+        boolean result = false;
         boolean expResult = true;
 
         LinkedList<String> actors = new LinkedList();
@@ -12,7 +10,7 @@
 
         System.out.println("Actors är: " + actors);
 
-        DVD instance = new DVD("", "", "", 1, actors);
+        DVD instance = new DVD("", "", "", 1 , actors);
 
         LinkedList testdata = new LinkedList();
 
@@ -21,12 +19,30 @@
 
         for (int i = 0; i < actors.size(); i++) {
 
-            testdata.add(temp.get(i));
-
-//            LinkedList expResult2 = actors;
-//            LinkedList Result2 = instance.actors;
-
-            assertEquals(expResult, result);
+            testdata.add(temp.get(i));   
 
         }
+        
+         // function under test
+        String listedinfo = instance.toString();
+
+        for (int i = 0; i < testdata.size(); i++) {
+            if (listedinfo.contains(String.valueOf(testdata.get(i)))) {
+                result = true;
+
+            } else {
+                fail();
+                break;
+            }
+
+        }
+              
+            System.out.println("Showing info for failed test: Actors");
+            System.out.println("String searched:");
+            System.out.println(temp);
+            System.out.println("Tried to find: " + listedinfo);
+
+           
+        assertEquals(expResult, result);
+    
     }
