@@ -1,0 +1,25 @@
+ @Test
+    public void testGetActors() {
+        
+        System.out.println("---------------testGetActors---------------");
+        boolean result = false;
+        boolean expResult = true;
+        
+        LinkedList<String> actors = new LinkedList();
+        actors.add("Kalle Anka");
+
+        String listedinfo = actors.toString();
+
+        for (int i = 0; i < actors.size(); i++) {
+            if (listedinfo.contains(String.valueOf(actors.get(i)))) {
+                System.out.println("Pass fick: " + listedinfo);
+
+            } else {
+                System.out.println("Failed, Fick: " + listedinfo + "Men Skulle var: Kalle Anka");
+                fail();
+                break;
+            }
+
+        }
+        assertEquals(expResult, result);
+    }
