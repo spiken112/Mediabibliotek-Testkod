@@ -1,0 +1,25 @@
+ @Test
+    public void testLoadFileBorrower() {
+
+//        String content;
+        try {
+            String content = new String(Files.readAllBytes(Paths.get("src/files/Lantagare.txt")));
+
+            System.out.println(content);
+            LibraryController lib = new LibraryController();
+
+//            ArrayList<Borrower> s = new ArrayList();
+//            for (Borrower bb : lib.allBorrowers.getElements()) {
+//                s.add(bb);
+//                s.add(bb);
+//                System.out.println(bb);
+//            }
+
+//            System.out.println(content);
+//            assertEquals(,content);
+
+        } catch (IOException ex) {
+            Logger.getLogger(BorrowerTest.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
+    }
