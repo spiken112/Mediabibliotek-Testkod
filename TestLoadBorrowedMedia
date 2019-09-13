@@ -1,0 +1,17 @@
+
+     @Test
+    public void testLoadBorrowdMedia() {
+
+
+        try {
+            String content = new String(Files.readAllBytes(Paths.get("src/files/Utlanade.txt")));
+
+            System.out.println(content);
+            LibraryController lib = new LibraryController();
+
+
+        } catch (IOException ex) {
+            Logger.getLogger(BorrowerTest.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
+    }
