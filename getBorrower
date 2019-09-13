@@ -1,0 +1,28 @@
+
+    @Test
+    public void testGetBorrower() {
+
+//        String bow = "891216-1111;Harald Svensson;040-471024";
+//        String content;
+//     
+//        try {
+//            content = new String(Files.readAllBytes(Paths.get("src/files/Lantagare.txt")));
+
+
+
+//            System.out.println(list);
+
+//            assertEquals(content, content);
+
+
+        LibraryController lib = new LibraryController();
+        boolean bow = lib.checkIfBorrowerExist("891216-1111");
+        assertEquals(true, bow);
+
+
+//        } catch (IOException ex) {
+//            Logger.getLogger(BorrowerTest.class.getName()).log(Level.SEVERE, null, ex);
+//        }
+//        
+        
+    }
