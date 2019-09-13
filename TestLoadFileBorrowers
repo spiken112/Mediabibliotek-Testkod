@@ -1,25 +1,31 @@
- @Test
+
+    @Test
     public void testLoadFileBorrower() {
-
-//        String content;
-        try {
-            String content = new String(Files.readAllBytes(Paths.get("src/files/Lantagare.txt")));
-
-            System.out.println(content);
-            LibraryController lib = new LibraryController();
-
-//            ArrayList<Borrower> s = new ArrayList();
-//            for (Borrower bb : lib.allBorrowers.getElements()) {
-//                s.add(bb);
-//                s.add(bb);
-//                System.out.println(bb);
-//            }
-
+//        try {
+//            String content = new String(Files.readAllBytes(Paths.get("src/files/Utlanade.txt")));
+//
 //            System.out.println(content);
-//            assertEquals(,content);
+//            LibraryController lib = new LibraryController();
+//
+//        } catch (IOException ex) {
+//            Logger.getLogger(BorrowerTest.class.getName()).log(Level.SEVERE, null, ex);
+//        }
 
-        } catch (IOException ex) {
-            Logger.getLogger(BorrowerTest.class.getName()).log(Level.SEVERE, null, ex);
+  LibraryController lib = new LibraryController();
+        ArrayList<Borrower> bb = new ArrayList<Borrower>();
+
+//        if(lib.allBorrowers.size() != 0){
+//            System.out.println(lib.allBorrowers.get(0));
+//        }
+        for (int i = 0; i < lib.allBorrowers.size(); i++) {
+            bb.add(lib.allBorrowers.get(i));
+
         }
+
+        for (Borrower theB : bb){
+//            System.out.println(theB.getName());
+        }
+
+          assertEquals(bb.size(),lib.allBorrowers.size());
 
     }
