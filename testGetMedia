@@ -1,0 +1,19 @@
+    @Test
+    public void testGetMedia() {
+        System.out.println("-----------Test GetMedia------------");
+        LibraryController a = new LibraryController();
+
+        ArrayList<Media> b = new ArrayList<Media>();
+
+        for (int i = 0; i < a.allMediaObjects.size(); i++) {
+            b.add(a.allMediaObjects.get(i));
+
+        }
+
+        for (Media theB : b) {
+//            System.out.println(theB.title);
+        }
+
+        assertEquals(b.size(), a.allMediaObjects.size());
+
+    }
