@@ -1,0 +1,38 @@
+ @Test
+    public void testLoadBorrowedMedia() {
+        System.out.println("loadBorrowedMedia");
+        LibraryController instance = new LibraryController();
+      
+//        System.out.println(instance.borrowed);
+        
+        ArrayList<String> testdata = new ArrayList();
+        testdata.add("681102-9999;277877");
+        testdata.add("681102-9999;398567");
+        testdata.add("681102-9999;528739");
+        testdata.add("681102-9999;211185");
+
+
+        
+       
+        System.out.println("Testdata");
+        for (int i = 0; i < testdata.size(); i++) {
+            System.out.println(testdata.get(i));
+            
+            
+        }
+        System.out.println("Borrow");
+        
+        for (int i = 0; i < instance.borrowed.size(); i++) {
+            System.out.println(instance.borrowed.get(i));
+        }
+       
+        if (testdata == instance.borrowed){
+            System.out.println("Pass");
+            
+        } else{
+            System.out.println("Fail");
+        }
+        
+        assertEquals(testdata, instance.borrowed);
+
+    }
