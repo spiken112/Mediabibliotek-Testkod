@@ -17,3 +17,21 @@
         assertEquals(b.size(), a.allMediaObjects.size());
 
     }
+
+
+@Test
+    public void testGetMedia2() {
+        System.out.println("-----------Test GetMedia2------------");
+        LibraryController a = new LibraryController();
+
+        
+      Media expObj= new Book("Bok","Tennisspelarna","553245",1977,"Gustafsson");
+      
+      Media resultObj = a.getMedia("553245");
+      
+      
+        System.out.println(expObj.toString());
+        System.out.println(resultObj.toString());
+      
+      
+        assertEquals(expObj,resultObj);
