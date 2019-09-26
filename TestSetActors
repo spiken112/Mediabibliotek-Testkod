@@ -1,0 +1,21 @@
+  @Test
+    public void testSetActors() {
+        System.out.println("---------------testSetActors---------------");
+
+       
+        LinkedList<String> actors = new LinkedList();
+        DVD instance = new DVD("", "", "", 1, actors);
+
+        LinkedList<String> expResult = actors;
+        LinkedList<String> result = instance.getActors();
+
+        actors.add("Kalle Anka");
+        actors.add("Musse Pigg");
+
+        System.out.println("Actors är: " + actors);
+
+        instance.setActors(actors);
+
+       
+        assertEquals(expResult, result);
+    }
